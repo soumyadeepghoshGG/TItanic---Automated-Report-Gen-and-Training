@@ -35,30 +35,18 @@ In this challenge, we build a predictive model that answers the question: <i>“
 
 ### Features
 
-| Variable | Definition | Key |
-
-|-----------|----------------------------------------|-------------------------------------------|
-
-| survival | Survival | 0 = No, 1 = Yes |
-
-| pclass | Ticket class | 1 = 1st, 2 = 2nd, 3 = 3rd |
-
-| sex | Sex | |
-
-| Age | Age in years | |
-
-| sibsp | # of siblings / spouses aboard | |
-
-| parch | # of parents / children aboard | |
-
-| ticket | Ticket number | |
-
-| fare | Passenger fare | |
-
-| cabin | Cabin number | |
-
-| embarked | Port of Embarkation | C = Cherbourg, Q = Queenstown, S = Southampton |
-
+| Variable | Definition                          | Key                                     |
+|----------|-------------------------------------|-----------------------------------------|
+| survival | Survival                            | 0 = No, 1 = Yes                         |
+| pclass   | Ticket class                        | 1 = 1st, 2 = 2nd, 3 = 3rd               |
+| sex      | Sex                                 |                                         |
+| Age      | Age in years                        |                                         |
+| sibsp    | # of siblings / spouses aboard     |                                         |
+| parch    | # of parents / children aboard     |                                         |
+| ticket   | Ticket number                       |                                         |
+| fare     | Passenger fare                      |                                         |
+| cabin    | Cabin number                        |                                         |
+| embarked | Port of Embarkation                 | C = Cherbourg, Q = Queenstown, S = Southampton |
   
 
 #### Variable Notes
@@ -91,19 +79,18 @@ In this challenge, we build a predictive model that answers the question: <i>“
 
 - Child = daughter, son, stepdaughter, stepson
 
-- Some children travelled only with a nanny, therefore parch=0 for them.
+- Some children traveled only with a nanny, therefore parch=0 for them.
 
  ## Data Exploration and Model Automation
-Our main goal here is to dig into the data, get cozy with it, and make friends with some handy tools like Sweetviz, Autoviz, and PyCaret. We're on a mission to understand our dataset better and implement techniques to automate visualisation with cool Python libraries like Sweetviz and Autoviz, while PyCaret takes care of the heavy lifting in building models.
+Our main goal here is to dig into the data, get cozy with it, and make friends with some handy tools like Sweetviz, Autoviz, and PyCaret. We're on a mission to understand our dataset better and implement techniques to automate visualization with cool Python libraries like Sweetviz and Autoviz, while PyCaret takes care of the heavy lifting in building models.
 
 ### Sweetviz
-
 Sweetviz is a Python library for Exploratory Data Analysis (EDA) that generates beautiful, high-density visualizations to quickly analyze and compare datasets. It provides insights into the distribution of features, relationships between variables, and more.
 ```bash
 ########## Usage Example ##########
 import  sweetviz  as  sv
-# Assuming you have a DataFrame called 'data'
 
+# Assuming you have a DataFrame called 'data'
 report  =  sv.analyze(data)
 report.show_html('sweetviz_report.html')
 ```
